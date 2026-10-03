@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Observatory</title>
+  <link rel="stylesheet" href="/static/css/app.css?v=20260920ui" />
+  <!-- Offline Plotly (local copy) -->
+  <script src="/static/js/plotly.min.js"></script>
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grid-fx"></div>
+  </div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">◈</div>
+        <div>
+          <h1>Data Observatory</h1>
+          <p>Enterprise Data Platform</p>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <div class="nav-group">
+          <div class="nav-group-title">خانه</div>
+          <button data-page="overview" class="active"><span class="ni">◆</span> Overview</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">کاتالوگ و متادیتا</div>
+          <button data-page="catalog"><span class="ni">🗄️</span> Data Catalog</button>
+          <button data-page="metadata"><span class="ni">📚</span> Metadata</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">مانیتورینگ</div>
+          <button data-page="freshness"><span class="ni">🔄</span> Freshness</button>
+          <button data-page="quality"><span class="ni">🧪</span> Data Quality</button>
+          <button data-page="alerts"><span class="ni">🚨</span> Alert Center</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">تحلیل و پروفایل</div>
+          <button data-page="profiler"><span class="ni">📊</span> Data Profiler</button>
+          <button data-page="growth"><span class="ni">📈</span> Table Growth</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">هوش مصنوعی</div>
+          <button data-page="assistant"><span class="ni">🤖</span> AI Assistant</button>
+          <button data-page="ml"><span class="ni">🧠</span> Machine Learning</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">انبار و پایپ‌لاین</div>
+          <button data-page="pipeline"><span class="ni">🔗</span> Pipeline Studio</button>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">ابزارها</div>
+          <button data-page="sql"><span class="ni">🔎</span> SQL Explorer</button>
+          <button data-page="bi"><span class="ni">📐</span> BI Studio</button>
+          <button data-page="discover"><span class="ni">🔭</span> Auto Discovery</button>
+        </div>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="health-pill" id="sideHealth">Health —</div>
+        <div class="muted tiny" id="sideScan">Last scan —</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow" id="pageEyebrow">PLATFORM</div>
+          <h2 id="pageTitle">Overview</h2>
+        </div>
+        <div class="top-actions">
+          <button class="btn ghost" id="btnScan">↻ Run Scan</button>
+          <div class="live-dot"><i></i> Live</div>
+        </div>
+      </header>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="/static/js/app.js?v=20260920ui"></script>
+</body>
+</html>
