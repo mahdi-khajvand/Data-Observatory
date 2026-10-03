@@ -116,7 +116,7 @@
 ### 6. AI Assistant
 
 ![AI Assistant](docs/screenshots/assistant.png)
-![AI Assistant](docs/screenshots/assistant2.png)
+![AI Assistant](docs/screenshots/assistant3.png)
 
 **کاربردی‌ترین ویژگی برای مدیران و تصمیم‌گیرندگان.**
 
